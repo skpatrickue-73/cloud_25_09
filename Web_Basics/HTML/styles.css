@@ -1,0 +1,118 @@
+/* Hello */
+
+h1 {
+    background-color: aqua;
+    color: chocolate;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+h1:hover {
+    background-color: blueviolet;
+}
+
+h4 {
+    background-color: crimson;
+}
+
+h5 {
+    background-color: crimson;
+}
+
+h6 {
+    background-color: crimson;
+}
+
+#special_1 {
+    background-color: chartreuse;
+}
+
+.h_4_5_6 {
+    font-family: monospace;
+    background-color: cyan;
+
+}
+
+
+.h_red {
+    background-color: red;
+
+}
+
+.h_blue {
+    background-color: blue;
+}
+
+#top_nav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+#movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#lists {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: skyblue;
+}
+
+
+
+
+
+/* h4, h5, h6 {
+    font-family: monospace;
+} */
+
+
+#h_4_5_6 {
+    font-family: monospace;
+    border-style: dashed;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 45px;
+    background-color: #87e880;
+}
+
+
+
+#p_demo {
+    border-style: solid;
+    border-color: blueviolet;
+
+    margin: 0.5% 0.4% 0.7% 0.3%;
+    padding: 10px 20px 30px 40px;
+}
+
+img {
+    width: 100px;
+}
+
+#catz {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#cat_1 {
+    grid-column: 1 / 2;
+}
+#cat_2 {
+    grid-column: 2 / 4;
+}
+#cat_3 {
+    grid-column: 4 / 5;
+}

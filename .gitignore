@@ -4,6 +4,10 @@
 **/__pycache__/*
 
 
+*brotimperium3000/*
+*git_repos/*
+*python_project/*
+
 ### macOS ###
 # General
 .DS_Store
