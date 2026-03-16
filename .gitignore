@@ -1,12 +1,14 @@
+*brotimperium3000/*
+*git_repos/*
+*python_project/*
+*/venv/*
+*/.venv/*
+*.db
+
 */venv/*
 **/git_ordner/**
 **/.DS_Store
 **/__pycache__/*
-
-
-*brotimperium3000/*
-*git_repos/*
-*python_project/*
 
 ### macOS ###
 # General
