@@ -1,6 +1,7 @@
 // vraiables
 
-let todos_dummy = [
+// dummy data
+let todos_dummy = [                //{id: bla, titel: "text"}
     {
         userId: 1,
         id: 1,
@@ -21,10 +22,6 @@ let todos_dummy = [
     }
 ]
 
-// console.log(todos_dummy)
-// console.log(todos_dummy[0])
-// console.log(todos_dummy[0])
-
 // functions
 
 function loadTodos() {
@@ -33,8 +30,8 @@ function loadTodos() {
 
     for (todo of todos_dummy) {
         console.log(todo)
-        let listItem = document.createElement("li")
-        listItem.textContent = todo["title"]
+        let listItem = document.createElement("li")  // <li></li>
+        listItem.textContent = todo["title"] // <li>titel vom todo</li>
         todoListHtml.appendChild(listItem)
     }
 }
@@ -48,16 +45,16 @@ function addTodo() {
             completed: false
         }
     )
-    console.log("Added Task")
+    document.querySelector("#addTaskInput").value = ""
 }
 
+// button event listener
 
 let addTodoButton = document.querySelector("#addTaskButton")
 addTodoButton.addEventListener("click", () => {
     addTodo()
     loadTodos()
 })
-
 
 // main
 
