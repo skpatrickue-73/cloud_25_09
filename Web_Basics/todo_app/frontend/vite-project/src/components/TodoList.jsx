@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getTodos } from "../api/getTodos";
+import todos from "../data/todos.json" with {
+  type: "json"
+}
+
+console.log(todos[0])
 
 function TodoList() {
-  // const [tasks, setTasks] = useState([
-  //   { id: 1, title: "first task", completed: false },
-  //   { id: 2, title: "second task", completed: false },
-  //   { id: 3, title: "third task", completed: false },
-  // ])
-  const [tasks, setTasks] = useState(["eat", "study", "sleep"]);
+
+  const [tasks, setTasks] = useState(todos);
   const [userInput, setUserInput] = useState("");
+
+
+// useEffect(arg1, arg2)
+  useEffect(() => {
+    async function loadPage() {
+      const todos = await getTodos()
+      setTasks(todos)
+    }
+    loadPage()
+    }
+  , [])
 
   function addTask(newTask) {
     if (newTask) {
@@ -25,6 +38,7 @@ function TodoList() {
           type="text"
           id="addTaskInput"
           placeholder="Was steht an Rockstar🎸"
+          value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
         <button
@@ -40,7 +54,7 @@ function TodoList() {
 md:bg-sky-600 hover:bg-sky-700 
 transition-all duration-300 ease-in-out transition-all duration-200 active:scale-95">
           {tasks.map(task => 
-          <li>{task}</li>
+          <li key={task.id}><span><input type="checkbox" value={task.completed}/>{task.title}</span></li>
         )}
 
         {/* <li>
